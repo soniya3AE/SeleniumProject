@@ -2,6 +2,7 @@ package SeleniumPro;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class Assingment7 {
 
@@ -9,12 +10,13 @@ public class Assingment7 {
 		// TODO Auto-generated method stub
 		
 		
-		ChromeDriver driver = new ChromeDriver();
-		driver.get("https://www.amazon.in/");
-	    driver.manage().window().maximize();
-		
-		//String actualTitle = appUrl.getText();
-		
+		 
+        SafariDriver driver1 = new SafariDriver();
+        driver1.manage().window().maximize();
+        driver1.get("https:www.amazon.com");
+        String title = driver1.getTitle();
+        System.out.println(title);
+        driver1.close();
 
 	}
 
